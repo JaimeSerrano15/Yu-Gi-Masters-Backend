@@ -9,6 +9,7 @@ router.get('/', function(req,res,next){
 router.post('/', function(req,res,next){
     cardController.save(req,res,next);
     console.log("Hay que crear cartas");
+    console.log("Prueba");
 })
 
 module.exports = router;
