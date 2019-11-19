@@ -4,9 +4,25 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var cardsRouter = require('./routes/cards');
+
+
+//Connect to DataBase
+mongoose.connect('mongodb+srv://GuilleTheBeast:daniel1199@cluster0-gjcyz.mongodb.net/YugiDB', {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+  .then(()=>{
+    console.log("Success Connected to DataBase");
+  })
+  .catch((err)=>{
+    console.log("Errooooor" + err);
+  });
 
 var app = express();
 
@@ -28,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/cards', cardsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
