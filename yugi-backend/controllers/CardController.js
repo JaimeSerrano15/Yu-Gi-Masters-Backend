@@ -21,3 +21,18 @@ module.exports.save = (req, res, next) => {
         }
     })
 }
+
+module.exports.getOne = (req,res,next) =>{
+    Card.findOne({
+        name: req.body.name
+    })
+    .then((foundCard)=>{
+        if(foundCard)
+            return res.status(200).json(foundCard);
+        else   
+            return res.status(400).json(null);
+    })
+    .catch(err =>{
+        next(err);
+    })
+}

@@ -13,7 +13,15 @@ var PostSchema = Schema({
         required: true
     },
 
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: 'usuarios'
+    },
 
+    comments: [{
+        type: Schema.Types.ObjectId,
+        ref: 'comentarios'
+    }]
 
 });
 

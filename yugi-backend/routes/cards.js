@@ -6,6 +6,8 @@ router.get('/', function(req,res,next){
     res.render('CardForm');
 });
 
+router.get('/:name', cardController.getOne);
+
 router.post('/', function(req,res,next){
     cardController.save(req,res,next);
     console.log("Hay que crear cartas");

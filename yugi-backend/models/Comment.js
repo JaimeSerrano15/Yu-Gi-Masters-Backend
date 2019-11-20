@@ -1,8 +1,6 @@
 const mongoose = require('mongoose'),
     Schema = mongoose.Schema
 
-//
-
 var CommentSchema = Schema({
     title: {
         type: String,
