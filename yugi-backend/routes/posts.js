@@ -6,7 +6,11 @@ router.get('/', postController.getAll);
 
 router.get('/:tittle', postController.getOne);
 
-router.get('/save', postController.save);
+router.post('/save', postController.save);
+
+router.get('/save', (req,res,next)=>{
+    res.render('index');
+})
 
 router.delete('/:tittle', postController.delete);
 

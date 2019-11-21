@@ -12,6 +12,9 @@ module.exports.save = (req, res, next) => {
             newPost.save();
             return res.json({ registered: true });
         })
+        .catch(err=>{
+            return err;
+        })
 };
 
 module.exports.getOne = (req, res, next) => {

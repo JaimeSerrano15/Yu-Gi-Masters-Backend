@@ -11,4 +11,6 @@ router.get('/', userController.getAll);
 
 router.get('/:name', userController.getOne);
 
+router.post('/log', userController.logIn);
+
 module.exports = router;

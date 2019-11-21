@@ -14,7 +14,10 @@ var CommentSchema = Schema({
 
     likes: Number,
 
-    createdAt: Date.now,
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
 
     author: {
         type: Schema.Types.ObjectId,

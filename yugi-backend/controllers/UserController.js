@@ -1,4 +1,5 @@
 var User = require('../models/User');
+var alerta = require('alert-node');
 
 module.exports.save = (req,res,next) =>{
     User.findOne({
@@ -19,6 +20,26 @@ module.exports.save = (req,res,next) =>{
             return res.json({registed: true});
         }
     })
+};
+
+module.exports.logIn = (req, res, next) => {
+    User.findOne({
+        name: req.body.name,
+        password: req.body.password
+    }, "--tyype --email")
+    .then((foundUser) =>{
+        if(foundUser){
+            console.log("Entrasteeeeeee");
+            return res.json({auth: true});
+        }
+        else{
+            console.log("Nooooo");
+            alerta('Credenciales incorrectas');
+        }
+    })
+    .catch(err =>{
+        next(err);
+    });
 };
 
 module.exports.getOne = (req,res,next) =>{

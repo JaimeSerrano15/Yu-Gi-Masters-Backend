@@ -7,15 +7,20 @@ module.exports.save = (req, res, next) => {
     },
     "--membersNo --createdAt --posts --members --authors"
   ).then(foundForum => {
-    if (foundUser) {
-      throw new Error(`Foro duplicado ${req.body.name}`);
+    if (foundForum) {
+      return new Error(`Foro duplicado ${req.body.name}`);
     } else {
       let newForum = new Forum({
         name: req.body.name
       });
-      newForum.save();
+      newForum.save().catch(err=>{
+        return err;
+      });
       return res.json({ registed: true });
     }
+  })
+  .catch(err =>{
+    return err;
   });
 };
 

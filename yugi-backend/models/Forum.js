@@ -13,7 +13,10 @@ var ForumSchema = Schema({
         default: 0
     },
 
-    createdAt: Date.now,
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
 
     posts: [{
         type: Schema.Types.ObjectId,
