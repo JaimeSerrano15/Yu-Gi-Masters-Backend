@@ -1,31 +1,28 @@
-var Forum = require("../models/Forum");
+var Deck = require("../models/Deck");
 
 module.exports.save = (req, res, next) => {
-  Forum.findOne(
-    {
-      name: req.body.name
-    },
-    "--membersNo --createdAt --posts --members --authors"
-  ).then(foundForum => {
-    if (foundUser) {
-      throw new Error(`Foro duplicado ${req.body.name}`);
+  Deck.findOne({
+    name: req.body.name
+  }).then(foundDeck => {
+    if (foundDeck) {
+      throw new Error(`Deck duplicado ${req.body.name}`);
     } else {
       let newForum = new Forum({
         name: req.body.name
       });
-      newForum.save();
+      newDeck.save();
       return res.json({ registed: true });
     }
   });
 };
 
 module.exports.getOne = (req, res, next) => {
-  Forum.findOne({
+  Deck.findOne({
     name: req.params.name
   })
-    .then(foundForum => {
-      if (foundForum) {
-        return res.status(200).json(foundForum);
+    .then(foundDeck => {
+      if (foundDeck) {
+        return res.status(200).json(foundDeck);
       } else {
         return res.status(400).json(null);
       }
@@ -39,11 +36,11 @@ module.exports.getAll = (req, res, next) => {
   var perPage = Number(req.query.size) || 10,
     page = req.query.page > 0 ? req.query.page : 0;
 
-  Forum.find({})
+  Deck.find({})
     .limit(perPage)
     .skip(perPage * page)
-    .then(forums => {
-      return res.status(200).json(forums);
+    .then(decks => {
+      return res.status(200).json(decks);
     })
     .catch(err => {
       next(err);
@@ -55,7 +52,7 @@ module.exports.update = (req, res, next) => {
     ...req.body
   };
 
-  Forum.findOneAndUpdate(
+  Deck.findOneAndUpdate(
     {
       name: req.params.name
     },
@@ -74,12 +71,13 @@ module.exports.update = (req, res, next) => {
 };
 
 module.exports.delete = (req, res, next) => {
-  Forum.findOneAndDelete({ name: req.params.name })
-    .then(data => {
-      if (data) res.status(200).json(data);
-      else res.status(404).send();
-    })
-    .catch(err => {
-      next(err);
-    });
-};
+    Deck.findOneAndDelete({ name: req.params.name })
+      .then(data => {
+        if (data) res.status(200).json(data);
+        else res.status(404).send();
+      })
+      .catch(err => {
+        next(err);
+      });
+  };
+  

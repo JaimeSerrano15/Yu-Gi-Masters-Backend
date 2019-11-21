@@ -1,31 +1,25 @@
-var Forum = require("../models/Forum");
+var Comment = require("../models/Comment");
 
 module.exports.save = (req, res, next) => {
-  Forum.findOne(
-    {
-      name: req.body.name
-    },
-    "--membersNo --createdAt --posts --members --authors"
-  ).then(foundForum => {
-    if (foundUser) {
-      throw new Error(`Foro duplicado ${req.body.name}`);
-    } else {
-      let newForum = new Forum({
-        name: req.body.name
-      });
-      newForum.save();
-      return res.json({ registed: true });
-    }
+  Comment.findOne({
+    title: req.body.title
+  }).then(foundComment => {
+    let newComment = new Comment({
+      title: req.body.title,
+      content: req.body.content
+    });
+    newComment.save();
+    return res.json({ registed: true });
   });
 };
 
 module.exports.getOne = (req, res, next) => {
-  Forum.findOne({
-    name: req.params.name
+  Comment.findOne({
+    title: req.params.title
   })
-    .then(foundForum => {
-      if (foundForum) {
-        return res.status(200).json(foundForum);
+    .then(foundComment => {
+      if (foundComment) {
+        return res.status(200).json(foundComment);
       } else {
         return res.status(400).json(null);
       }
@@ -39,11 +33,11 @@ module.exports.getAll = (req, res, next) => {
   var perPage = Number(req.query.size) || 10,
     page = req.query.page > 0 ? req.query.page : 0;
 
-  Forum.find({})
+  Comment.find({})
     .limit(perPage)
     .skip(perPage * page)
-    .then(forums => {
-      return res.status(200).json(forums);
+    .then(comments => {
+      return res.status(200).json(comments);
     })
     .catch(err => {
       next(err);
@@ -55,9 +49,9 @@ module.exports.update = (req, res, next) => {
     ...req.body
   };
 
-  Forum.findOneAndUpdate(
+  Comment.findOneAndUpdate(
     {
-      name: req.params.name
+      title: req.params.title
     },
     update,
     {
@@ -74,7 +68,7 @@ module.exports.update = (req, res, next) => {
 };
 
 module.exports.delete = (req, res, next) => {
-  Forum.findOneAndDelete({ name: req.params.name })
+  Comment.findOneAndDelete({ title: req.params.title })
     .then(data => {
       if (data) res.status(200).json(data);
       else res.status(404).send();

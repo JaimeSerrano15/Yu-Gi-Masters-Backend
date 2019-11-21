@@ -46,5 +46,11 @@ module.exports.getAll = (req, res, next) => {
 };
 
 module.exports.delete = (req,res,next)=>{
-    Post.findOneAndDelete({})
+    Post.findOneAndDelete({tittle: req.params.name})
+    .then((data) =>{
+        if(data) res.status(200).json(data);
+        else res.status(404).send();
+    }).catch(err => {
+        next(err);
+    })
 }
