@@ -23,7 +23,7 @@ module.exports.save = (req,res,next) =>{
 
 module.exports.getOne = (req,res,next) =>{
     User.findOne({
-        name: req.body.name
+        name: req.params.name
     }, '--password --email --follows')
     .then((foundUser)=>{
         if(foundUser){

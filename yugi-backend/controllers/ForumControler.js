@@ -20,7 +20,7 @@ module.exports.save = (req,res,next) =>{
 
 module.exports.getOne = (req,res,next) =>{
     Forum.findOne({
-        name: req.body.name
+        name: req.params.name
     })
     .then((foundForum)=>{
         if(foundForum){
