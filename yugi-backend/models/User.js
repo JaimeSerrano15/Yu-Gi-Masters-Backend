@@ -21,7 +21,10 @@ var UserSchema = Schema({
         required: true
     },
 
-    follows: Number,
+    follows: {
+        type: Number,
+        default: 0
+    },
 
     chat: Array,
 

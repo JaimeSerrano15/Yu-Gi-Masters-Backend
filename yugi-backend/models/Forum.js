@@ -8,7 +8,10 @@ var ForumSchema = Schema({
         unique: true
     },
 
-    membersNo: Number,
+    membersNo: {
+        type: Number,
+        default: 0
+    },
 
     createdAt: Date.now,
 
