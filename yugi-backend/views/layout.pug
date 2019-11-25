@@ -2,6 +2,33 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/static/main.css')
   body
-    block content
+    header
+      div(class="logoType")
+        img(src="https://carlisletheacarlisletheatre.org/images/yugioh-logo-transparent-5.png" alt="Logo" class="logo")
+      nav(class="menuNav")
+        ul
+          li
+            a(href="/" class="nav-li")
+              span Home
+          li
+            a(href="/" class="nav-li")
+              span Perfil
+          li
+            a(href="/" class="nav-li")
+              span Amigos
+    block content 
+    footer(class="footer")
+      ul
+        li
+          img(src="https://seeklogo.com/images/I/instagram-new-2016-logo-4773FE3F99-seeklogo.com.png" alt="face" class="facebook")
+        li(class="info")
+          span
+            a(href="/info/" class="info-link") Acerca de
+        li
+          img(src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="insta" class="instagram")
+
+
+
+

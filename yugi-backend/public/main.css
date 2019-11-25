@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Alata&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+.logo {
+    height: 70px;
+}
+
+.info-link {
+    color: green;
+}
+
+body {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e27d991c-f967-4884-b0c4-1ef41a5dc5d7/d6guduy-a9f4a7af-3dc3-4ac4-955a-96117f27e200.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UyN2Q5OTFjLWY5NjctNDg4NC1iMGM0LTFlZjQxYTVkYzVkN1wvZDZndWR1eS1hOWY0YTdhZi0zZGMzLTRhYzQtOTU1YS05NjExN2YyN2UyMDAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kCdbyS33z1y4DkvUm5cvWfF334IYxYQM-zNNseSes_c");
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.menuNav ul li:hover{
+  color: #FFD700
+}
+
+.nav-li {
+    text-decoration: none;
+    color: #00f7ff;
+}
+
+.nav-li:hover{
+    color: #FFD700; 
+}
+
+.header ul {
+  list-style: none;
+}
+.menuNav ul li {
+  text-decoration: none;
+  list-style: none;
+  font-size: 12px;
+}
+
+header {
+  display: flex;
+  color: antiquewhite;
+  background: black;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  height: 175px;
+}
+
+.header ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logoType {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.form {
+  align-items: center;
+  margin: 1em;
+}
+
+h3 {
+text-align: center;
+color: 	#F0FFFF;
+font-family: "Alata", sans-serif;
+text-align: center;
+}
+
+.BigText {
+  height: 70px;
+}
+
+.submitBtn button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  border-radius: 30px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.title input{
+  height: 2em;
+  width: 100%;
+}
+
+
+.menuNav ul li {
+  padding: 0.5vh 1vh;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.menuNav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0.5em 1em 0.5em 1em;
+  padding: 0;
+}
+
+.span {
+  box-sizing: border-box;
+  padding: 0px 20px;
+  text-align: center;
+}
+.article div{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.article {
+  display: flex;
+  justify-content: center;
+  margin:0;
+  padding: 0;
+}
+.BigText{
+  width: 100%;
+}
+
+.frase {
+  font-family: "Alata", sans-serif;
+  box-sizing: border-box;
+  color: 	#F0FFFF;
+}
+
+.BigText {
+ border-radius: 5px;
+ border: solid black;
+ border-width: 1.5px;
+}
+
+.boxTitle {
+  border-radius: 5px;
+  border: solid black;
+  border-width: 1.5px;
+
+}
+
+.footer {
+  background: #3a227f;
+  color: antiquewhite;
+  bottom: 0;
+  box-sizing: border-box;
+  position: absolute;
+  height: 75px;
+  width: 100%;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;;
+}
+
+.footer ul li {
+  padding: 1em 2em;
+  list-style: none;
+  font-size: 13px;
+}
+
+.facebook {
+  height: 30px;
+  width: 30px;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+.instagram {
+  height: 30px;
+  width: 30px;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Pesonalizando estilo para escritorio*/
+@media only screen and (min-width: 1440px) {
+
+  form{
+    width: 50%;
+    height: 75%;
+  }
+  .title input {
+    height: 2.5em;
+    width: 100%;
+  
+}
+
+.BigText textarea{
+  height: 5em;
+  width: 100%;
+}
+.submitBtn button{
+font-size: 20px;
+}
+}
