@@ -1,0 +1,12 @@
+extends layout
+
+block forumCreation
+    section(class ="crearForo")
+        span(class = "tittle") Crea un foro a tu gusto
+        article(class = "body")
+                h3 Nombre de tu foro
+                    form(class="form")
+                        input(type="text" placeholder="Nombre creativo..." name="nombre")
+                        br
+                        br
+                        button(className="submit") Crear 
