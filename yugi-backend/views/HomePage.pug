@@ -1,0 +1,21 @@
+extends layout 
+
+block Home 
+    section(class="perfil")
+            aside(class="aside")
+                h2 Nombre del usurio 
+                span(class="seguidores") Seguidores: 7
+                br
+                br
+                span(class="tusmazos") Tus mazos
+    section(class="pageBody")
+                h3 Foros de la comunidad
+                input(type="text" placeholder="Filtrar..." name="buscar")
+                button(className="submit") Buscar
+                ul
+                    li Foro 1
+    section(class="botonesC")
+                button(className="CForo") Crear Foro 
+                br
+                br
+                button(className="CMazo") Crear Mazo
