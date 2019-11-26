@@ -1,21 +1,25 @@
 extends layout
 
 
-block mostrarp
-   div(class="post")
-                h1 Titulo del post 
+block content
+  div(class="post")  
+    div(class="post-info")
+                h1(class="post-title") Titulo del post 
+                hr
                 br
                 p Aqui se muestra la descripcion de la publicacion 
                 br
-                span(class="likes") Likes: 3
-                br
-                h2 Comentarios
+                span(class="likes") Like 3
+                br      
+    div(class="comments")   
+            h2(class="comment-title") Comentarios
                 ul
-                    li Aqui van los comentario xdxd                
-   div(class="comments")
-                h2 Agrega un comentario
-                form
-                    textarea(type="text" placeholder="Agrega texto.." name="nombre")
+                    li Aqui van los comentario xdxd   
+            p Agrega un comentario
+            hr
+            br
+            form(class="add-comment")
+                    textarea(class="comment-text" type="text" placeholder="Agrega texto.." name="nombre")
                     br
                     br
-                    button(className="submit") Agregar 
+                    button(class="submit") Agregar 

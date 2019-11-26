@@ -260,7 +260,7 @@ html {
 }
 
 body {
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e27d991c-f967-4884-b0c4-1ef41a5dc5d7/d6guduy-a9f4a7af-3dc3-4ac4-955a-96117f27e200.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UyN2Q5OTFjLWY5NjctNDg4NC1iMGM0LTFlZjQxYTVkYzVkN1wvZDZndWR1eS1hOWY0YTdhZi0zZGMzLTRhYzQtOTU1YS05NjExN2YyN2UyMDAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kCdbyS33z1y4DkvUm5cvWfF334IYxYQM-zNNseSes_c");
+  background-image: url("https://image.winudf.com/v2/image/Y29tLnpkYW11c2VtZW50LmxpdmV3YWxsYXBlci5kZWVwc3BhY2Vfc2NyZWVuc2hvdHNfNl85N2MxNWM3OQ/screen-6.jpg?fakeurl=1&type=.jpg");
   background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -646,15 +646,40 @@ div .info_personal{
   font-size: 3vh;
 }
 
-.rf button {
-  font-size: 2vh;
+.register-form form button {
+  margin: 1em 2em 2em 1em;
+  height: 4em;
+  width: 10em;
+  align-self: center;
+  border-radius: 3em;
 }
 
-.register-form form button {
-  margin: 1em 1em 2em 1em;
-  height: 2.5em;
-  width: 7em;
-  align-self: center;
+.button-r {
+  background-color:#d35400;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+.button-r span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-r .title:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-r:hover .tittle {
+  padding-right: 25px;
 }
 
 .register-form a {
@@ -670,5 +695,80 @@ div .info_personal{
   margin-bottom: 1.5em ;
 }
 
-/*HomePage*/
+button{
+  color:#fff;
+  text-align: center;
+  padding: 20px;
 }
+
+/*HomePage*/
+
+
+/*Show_Post*/
+.post{
+  display: flex;
+  flex-direction: column;
+}
+
+.post-info .post-title{
+  font-size: 15pt;
+  text-align: center;
+  margin: 1em;
+  color: #C0C9D1;
+}
+
+.post-info .likes{
+  background-color: #3773A8;
+  padding: 3px;
+  border-radius: 10px;
+  margin-left: 2em;
+}
+
+.post-info .likes:hover{
+  background-color:#321B46;
+}
+
+.comments .comment-title{
+  font-size: 10pt;
+  margin: 1em;
+}
+
+.post hr {
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 85%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.post li{
+  color: whitesmoke;
+  margin-left: 1.8em;
+  font-size: 9px;
+}
+
+.post p{
+  color: whitesmoke;
+  margin-left: 1em;
+  font-size: 10px;
+}
+.comments .comment-title{
+  font-size: 14px;
+  color: #B9D9F6;
+}
+.comments .add-comment .comment-text{
+  margin-left: 1.5em;
+  border-radius: 10px;
+}
+
+.comments .add-comment .submit {
+  margin-left: 1.5em;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: #321B46;
+  margin-bottom: 4em;
+}
+
+
