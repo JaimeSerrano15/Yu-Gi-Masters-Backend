@@ -1,23 +1,24 @@
 extends layout 
 
 block content 
-    div(class="perfil")
-        h2 Nombre del usurio 
-        span Seguidores: 7
-        br
-        br
-        span Tus mazos
-    div(class="aviable")
-    div(class="Aone")
-        h3 Foros de la comunidad
-        input(type="text" placeholder="Filtrar..." name="buscar")
-        button(class="submit") Buscar
-        div(class="Atwo")
-        ul
-            li Foro 1
-    div(class="buttoms")
-        h3 Escoge lo que deseas crear
-        button(className="CForo") Crear Foro 
-        br
-        br
-        button(className="CMazo") Crear Mazo
+    section(class="perfil")
+            aside(class="aside")
+                h2 Nombre del usurio 
+                span(class="seguidores") Seguidores: 7
+                br
+                br
+                span(class="tusmazos") Tus mazos
+    section(class="pageBody")
+                h3 Foros de la comunidad
+                input(type="text" placeholder="Filtrar..." name="buscar")
+                button(class="submit") Buscar
+                ul
+                    for forum in forums
+                        a(href="https://www.google.com/" class="forum-link")
+                            li= forum.name
+    section(class="botonesC")
+                a(href="/crforum" class="create-span")
+                    span(class="CForo") Crear Foro 
+                br
+                br
+                span(class="CMazo") Crear Mazo

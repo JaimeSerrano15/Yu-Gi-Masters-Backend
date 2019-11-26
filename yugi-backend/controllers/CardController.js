@@ -38,12 +38,12 @@ module.exports.getOne = (req, res, next) => {
 }
 
 module.exports.getAll = (req, res, next) => {
-    var perPage = Number(req.query.size) || 10,
-        page = req.query.page > 0 ? req.query.page : 0;
+    ///var perPage = Number(req.query.size) || 10,
+    //    page = req.query.page > 0 ? req.query.page : 0;
 
     Card.find({})
-        .limit(perPage)
-        .skip(perPage * page)
+    //    .limit(perPage)
+    //    .skip(perPage * page)
         .then((cards) => {
             return res.status(200).json(cards);
         }).catch(err => {

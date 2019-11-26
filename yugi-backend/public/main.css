@@ -209,6 +209,14 @@ text-align: center;
   margin: 0;
 }
 
+.forum-link{
+  color: #bd8a00;
+}
+
+.create-span{
+  color: #f7ae79
+}
+
 /* Pesonalizando estilo para escritorio*/
 /*@media only screen and (min-width: 1440px) {
 
@@ -663,3 +671,4 @@ div .info_personal{
 }
 
 /*HomePage*/
+}

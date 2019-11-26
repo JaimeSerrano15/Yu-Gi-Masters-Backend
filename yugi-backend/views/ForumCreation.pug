@@ -1,13 +1,12 @@
 extends layout
 
-block forumCreation
-div(class ="forum")
-    section
+block content
+    section(class ="crearForo")
         span(class = "tittle") Crea un foro a tu gusto
-        article
-                h3 Nombre de tu foro
-                    form
-                        input(type="text" placeholder="Nombre creativo..." name="nombre")
-                        br
-                        br
-                        button(className="submit") Crear
+        article(class = "body")
+            h3 Nombre de tu foro
+                form(class="form" method="POST") 
+                    input(type="text" placeholder="Nombre creativo..." name="name")
+                    br
+                    br
+                    button(className="submit") Crear 

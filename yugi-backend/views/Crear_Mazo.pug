@@ -1,12 +1,14 @@
 extends layout
 
-block CrearMazo
+block content
   div(class="buscar")
           div(class="formCarta")
-             h2 Buscar cartas para tu mazo
+             label(for="selec") Buscar cartas para tu mazo
              br
              form
-             input(type="text" placeholder="Busca una carta..." name="buscar")
+                select(type="select" placeholder="Busca una carta..." name="selec")
+                        for card in cd
+                                option(value=card.name)= card.name
              button(class="buscar") Buscar 
              form
              button(class="agregar") Agregar
