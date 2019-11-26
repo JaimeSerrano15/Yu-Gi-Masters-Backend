@@ -36,7 +36,9 @@ router.post('/login', function(req,res,next){
 
   axios.post('http://localhost:3001/users/log', confirm).then((ros)=>{
     if(ros.data.auth){
+      console.log("Usuario loggeado")
       res.redirect('/');
+
     }
     else{
       res.redirect('/login');
