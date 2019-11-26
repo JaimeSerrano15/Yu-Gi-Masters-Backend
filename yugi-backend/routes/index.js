@@ -99,6 +99,7 @@ router.post('/crpost', function(req,res,next){
 router.get('/crdeck', function(req,res,next){
   axios.get('http://localhost:3001/cards/').then((ros)=>{
     res.render('Crear_Mazo', {cd: ros.data});
+    console.log("push");
   })
 })
 
