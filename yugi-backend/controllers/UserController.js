@@ -34,7 +34,7 @@ module.exports.logIn = (req, res, next) => {
         }
         else{
             console.log("Nooooo");
-            alerta('Credenciales incorrectas');
+            return res.jon({auth: false});
         }
     })
     .catch(err =>{

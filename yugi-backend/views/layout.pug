@@ -5,37 +5,32 @@ html
     link(rel='stylesheet', href='/static/main.css')
   body
     header
-          div(className = "logoType")
-            img(
-              src="https://carlisletheacarlisletheatre.org/images/yugioh-logo-transparent-5.png"
-              alt="Logo"
-              className="logo")
-            
-          nav(className = 'menuNav')
-            ul
-              li
-                span Home
-              li
-                span Perfil
-              li
-                span Amigos
-              li
-    block content
-    block welcome
-    block info
-    block postCreation
-    block forumCreation
-    block mostrarf
-    block mostrarp
-    block buscarC
-    block MostrarMazo
-    block mostrarM
-    block Home
-    block CrearMazo
+      div(class="logoType")
+        img(src="https://carlisletheacarlisletheatre.org/images/yugioh-logo-transparent-5.png" alt="Logo" class="logo")
+      nav(class="menuNav")
+        ul
+          li
+            a(href="/" class="nav-li")
+              span Home
+          li
+            a(href="/" class="nav-li")
+              span Perfil
+          li
+            a(href="/" class="nav-li")
+              span Amigos
+    block content 
+    footer(class="footer")
+      ul
+        li
+          a(href="https://www.instagram.com/?hl=es-la")
+            img(src="https://seeklogo.com/images/I/instagram-new-2016-logo-4773FE3F99-seeklogo.com.png" alt="face" class="facebook")
+        li(class="info")
+          span
+            a(href="/info/" class="info-link") Acerca de
+        li
+          a(href="https://www.facebook.com/")
+            img(src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="insta" class="instagram")
 
-    footer
-        span Info
-        span Facebook
-        span Insta
-          
-    
+
+
+

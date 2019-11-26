@@ -13,6 +13,17 @@ html {
   position: relative;
 }
 
+<<<<<<< HEAD
+=======
+.logo {
+    height: 70px;
+}
+
+.info-link {
+    color: green;
+}
+
+>>>>>>> Jaime
 body {
   background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e27d991c-f967-4884-b0c4-1ef41a5dc5d7/d6guduy-a9f4a7af-3dc3-4ac4-955a-96117f27e200.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UyN2Q5OTFjLWY5NjctNDg4NC1iMGM0LTFlZjQxYTVkYzVkN1wvZDZndWR1eS1hOWY0YTdhZi0zZGMzLTRhYzQtOTU1YS05NjExN2YyN2UyMDAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kCdbyS33z1y4DkvUm5cvWfF334IYxYQM-zNNseSes_c");
   background-size: cover;
@@ -31,6 +42,18 @@ code {
   color: #FFD700
 }
 
+<<<<<<< HEAD
+=======
+.nav-li {
+    text-decoration: none;
+    color: #00f7ff;
+}
+
+.nav-li:hover{
+    color: #FFD700; 
+}
+
+>>>>>>> Jaime
 .header ul {
   list-style: none;
 }
@@ -47,7 +70,11 @@ header {
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
+<<<<<<< HEAD
 
+=======
+  height: 175px;
+>>>>>>> Jaime
 }
 
 .header ul {
