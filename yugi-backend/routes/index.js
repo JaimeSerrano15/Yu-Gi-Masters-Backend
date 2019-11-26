@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('HomePage');
+  res.render('Crear_Mazo');
 });
 
 router.get('/prueba', function(req,res,next){

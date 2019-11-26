@@ -1,15 +1,26 @@
 extends layout
 
 block CrearMazo
-       div(class="mostrarMazo")
-                div(class="search")
-                    label Nombre del mazo: 
-                    input(type="text" placeholder="Agrega un nombre: " name="titulo")
-                div(class="cartas")
-                 label Cartas agregadas: 
-                      ul
-                        li Carta 1
-                div(class="botons")
-                      button(className="BorrarT") Borrar todo
-                      button(className="Borrar") Borrar carta
-                      button(className="Guardar") Guardar
+  div(class="buscar")
+          div(class="formCarta")
+             h2 Buscar cartas para tu mazo
+             br
+             form
+             input(type="text" placeholder="Busca una carta..." name="buscar")
+             button(class="buscar") Buscar 
+             form
+             button(class="agregar") Agregar
+          h2 Datos de la carta
+          div aqui va a ir la informacion de la carta buscada y encontrada
+          div(class="mostrarMazo")
+  div(class="search")
+          label Nombre del mazo: 
+          input(type="text" placeholder="Agrega un nombre: " name="titulo")
+          div(class="cartas")
+             label Cartas agregadas: 
+             ul
+               li Carta 1
+          div(class="botons")
+               button(className="BorrarT") Borrar todo
+               button(className="Borrar") Borrar carta
+               button(className="Guardar") Guardar
