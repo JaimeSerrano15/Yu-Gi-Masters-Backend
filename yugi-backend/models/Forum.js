@@ -18,20 +18,9 @@ var ForumSchema = Schema({
         default: Date.now
     },
 
-    posts: [{
-        type: Schema.Types.ObjectId,
-        ref: 'publicaciones'
-    }],
+    posts: Array,
 
-    members: [{
-        type: Schema.Types.ObjectId,
-        ref: 'usuarios'
-    }],
-
-    author: {
-        type: Schema.Types.ObjectId,
-        ref: 'usuarios'
-    }
+    members: Array, 
 });
 
 module.exports = mongoose.model('foros', ForumSchema);

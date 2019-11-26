@@ -1,6 +1,6 @@
 extends layout 
 
-block Home 
+block content 
     section(class="perfil")
             aside(class="aside")
                 h2 Nombre del usurio 
@@ -11,11 +11,14 @@ block Home
     section(class="pageBody")
                 h3 Foros de la comunidad
                 input(type="text" placeholder="Filtrar..." name="buscar")
-                button(className="submit") Buscar
+                button(class="submit") Buscar
                 ul
-                    li Foro 1
+                    for forum in forums
+                        a(href="https://www.google.com/" class="forum-link")
+                            li= forum.name
     section(class="botonesC")
-                button(className="CForo") Crear Foro 
+                a(href="/crforum" class="create-span")
+                    span(class="CForo") Crear Foro 
                 br
                 br
-                button(className="CMazo") Crear Mazo
+                span(class="CMazo") Crear Mazo

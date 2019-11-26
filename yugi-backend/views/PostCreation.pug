@@ -1,21 +1,17 @@
 extends layout 
 
-block postCreation
-
+block content
     div(class = "postCreation")
          section(class = "bodySection")
                  br
                  div(class = "span")
-                 span(class = "frase") Crea un post para interactuar con la comunidad
+                    span(class = "frase") Crea un post para interactuar con la comunidad
                  div(class = "article")
-                    form
-                        h3 Titulo
-                        div(class = "title")
-                            input(class = "boxTitle" type = "text" placeholder = "Un título creativo...")
-                            br 
-                            br
-                        h3(class = "postCont") Contenido
-                        div(class = "content")
-                            textarea(class = "BigText" type="text2" placeholder="Discusion")
-                        div(class = "submitBtn")
-                            button Publicar
+                    form(method="POST")
+                        label(for="tittle")
+                        input(class = "boxTitle" name="tittle" type = "text" placeholder = "Un título creativo...")
+                        br 
+                        br
+                        label(for="content") Contenido
+                        textarea(class = "BigText" type="text" name="content" placeholder="Discusion")
+                        button(type="submit") Publicar
