@@ -4,13 +4,6 @@ var axios = require('axios');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-<<<<<<< HEAD
-  res.render('Crear_Mazo');
-});
-
-router.get('/prueba', function(req,res,next){
-  res.render('welcome')
-=======
   res.render('register', { in: false});
 });
 
@@ -51,7 +44,6 @@ router.post('/login', function(req,res,next){
       res.redirect('/login');
     }
   })
->>>>>>> Jaime
 })
 
 module.exports = router;
