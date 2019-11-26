@@ -4,7 +4,6 @@ block content
     div(class="register-form")
         div(class="present")
             p Bienvenido a la versión Beta de Yu-Gi-Masters. Buscamos que los usuarios puedan encontrar información sobre mazos, cartas y apoyo de la comunidad.
-        a(href="/login/" class="nav-li") ¿Ya tienes cuenta? ¡Ingresa aquí!
         form(class="rf" method="POST")
             label(for="name") Name: 
             input(type="text" name="name" placeholder="Tu nombre de duelista")
@@ -13,3 +12,5 @@ block content
             label(for="mail") Email:
             input(type="text" name="mail" placeholder="yugioh@gmail.com") 
             button(type="submit") Registrarse
+            br
+            a(href="/login/" class="nav-li") ¿Ya tienes cuenta? ¡Ingresa aquí!

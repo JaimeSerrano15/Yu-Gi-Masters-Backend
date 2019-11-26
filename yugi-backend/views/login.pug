@@ -3,11 +3,15 @@ extends layout
 block content
     div(class="LoginForm")
         form(method="POST")
-            label(for="name") Name
+            label(for="name") Usuario:
             input(type="text" name="name" placeholder="¿Duelista?")
-            label(for="pass")
+            br
+            br
+            label(for="pass") Contraseña:
             input(type="text" name="pass" placeholder="******")
-            button(type="submit") ¡Ingresar!
-        a(href="/" class="nav-li")
-            span ¿Registrarse?
+            br
+            br
+            button(type="submit") Ingresar
+            br
+        a(href="/" class="nav-li") ¿Registrarse?
         

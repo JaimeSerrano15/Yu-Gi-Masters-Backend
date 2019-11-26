@@ -48,4 +48,8 @@ router.post('/login', function(req,res,next){
   })
 })
 
+router.get('/home', function(req,res,next){
+  res.render('HomePage');
+})
+
 module.exports = router;

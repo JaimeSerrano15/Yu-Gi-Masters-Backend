@@ -2,7 +2,8 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/static/main.css')
+    link(rel='stylesheet' href='/static/main.css')
+    link(rel="stylesheet" href="../src/index.css")
   body
     header
       div(class="logoType")
@@ -13,12 +14,12 @@ html
             a(href="/" class="nav-li")
               span Home
           li
-            a(href="/" class="nav-li")
+            a(href="/home" class="nav-li")
               span Perfil
           li
             a(href="/" class="nav-li")
               span Amigos
-    block content 
+    block content
     footer(class="footer")
       ul
         li
