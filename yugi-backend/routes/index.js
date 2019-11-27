@@ -103,4 +103,8 @@ router.get('/crdeck', function(req,res,next){
   })
 })
 
+router.get('/shpost', function(req,res,next){
+  res.render ('Show_Post')
+})
+
 module.exports = router;

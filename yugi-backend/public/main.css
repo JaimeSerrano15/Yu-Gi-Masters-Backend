@@ -431,38 +431,29 @@ div .info_personal {
 
 /*Crear_mazo*/
 
-.crear_mazo {
-  box-sizing: border-box;
+.crear_mazo div {
+  color: #ffffff;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 30px;
-  color: #ffffff;
-}
-
-.crear_mazo button {
-  margin: 1em;
-  font-size: 2vh;
 }
 .mazo label {
-  display: inline-block;
   margin: 1em;
 }
 .mazo input {
-  margin: 2em;
-  height: 3em;
-  width: 25%;
+  margin: auto;
 }
 .mazo select {
-  height: 3em;
+  margin: 1em;
+  width: 25%;
 }
-
-.search label {
-  display: inline-block;
+.agregar button {
   margin: 1em;
 }
-
-.search li {
-  margin: 0.5em;
+.crear_mazo button {
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
