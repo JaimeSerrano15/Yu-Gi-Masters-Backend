@@ -243,7 +243,7 @@ font-size: 20px;
 @import url("https://fonts.googleapis.com/css?family=Alata&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /*
-General and CreatePost
+General
 */
 
 *,
@@ -260,7 +260,7 @@ html {
 }
 
 body {
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e27d991c-f967-4884-b0c4-1ef41a5dc5d7/d6guduy-a9f4a7af-3dc3-4ac4-955a-96117f27e200.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UyN2Q5OTFjLWY5NjctNDg4NC1iMGM0LTFlZjQxYTVkYzVkN1wvZDZndWR1eS1hOWY0YTdhZi0zZGMzLTRhYzQtOTU1YS05NjExN2YyN2UyMDAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kCdbyS33z1y4DkvUm5cvWfF334IYxYQM-zNNseSes_c");
+  background-color: #891100;
   background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -275,7 +275,7 @@ code {
     monospace;
 }
 
-nav ul li:hover {
+header nav ul li:hover {
   color: #ffd700;
 }
 
@@ -305,48 +305,23 @@ header {
   height: 70px;
 }
 
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em;
-  width: 60%;
-  height: 75%;
-}
-
-h3 {
-  margin: 0.5em;
-  text-align: center;
-  color: #f0ffff;
-  font-family: "Alata", sans-serif;
-  text-align: center;
-}
-
-.BigText {
-  height: 20vh;
-}
-
-.submitBtn button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  border-radius: 5px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 3vh;
-}
-
-.title input {
-  height: 2.5em;
-  width: 100%;
-}
 
 nav ul li {
   padding: 0.5vh 5vh;
   list-style: none;
   text-decoration: none;
   font-size: 2vh;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f0f8ff;
+}
+
+.footer ul li span a {
+  text-decoration: none;
+  font-size: 2.3vh;
+  color: #f0f8ff;
 }
 
 nav ul {
@@ -357,52 +332,14 @@ nav ul {
   padding: 0;
 }
 
-.span {
-  box-sizing: border-box;
-  padding: 1em;
-  font-size: 3vh;
-  text-align: center;
-}
-.article div {
-  margin: 0;
-  padding: 0;
-}
-
-.article {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-.BigText {
-  width: 100%;
-}
-
-.frase {
-  font-family: "Alata", sans-serif;
-  box-sizing: border-box;
-  color: #f0ffff;
-}
-
-.BigText {
-  border-radius: 5px;
-  border: solid black;
-  border-width: 1.5px;
-}
-
-.boxTitle {
-  border-radius: 5px;
-  border: solid black;
-  border-width: 1.5px;
-}
 
 .footer {
-  background: #000000;
+  background: #b00043;
   color: antiquewhite;
   bottom: 0;
   box-sizing: border-box;
   position: absolute;
-  height: 50px;
+  height: 70px;
   width: 100%;
 }
 
@@ -413,11 +350,10 @@ nav ul {
 }
 
 .footer ul li {
-  display: flex;
+  
   justify-content: center;
   margin: 1em 2em 0em 2em;
   list-style: none;
-  font-size: 2.5vh;
 }
 
 .facebook {
@@ -444,7 +380,7 @@ Login
   justify-content: center;
   align-items: center;
   margin: 2em;
-  height: 75%;
+ 
 }
 
 .LoginForm form {
@@ -457,23 +393,31 @@ Login
   justify-content: center;
 }
 
-.Login input {
-  width: 40vh;
-  height: 3.5vh;
+.LoginForm form input {
+  height: 4vh;
+  width: 45vh;
+  margin: 1.5em;
 }
 
 .LoginForm form label {
   align-self: center;
-  font-size: 3vh;
+  font-size: 3.5vh;
+  margin: 0.5em;
 }
-.Btn button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  font-size: 3vh;
+.LoginForm form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+
+}
+
+.nav-li {
+  font-size: 2.5vh;
+  margin: 0.5em;
+  color: #f0f8ff;
+  text-decoration: none;
 }
 
 .LoginForm .Btn {
@@ -484,46 +428,58 @@ Login
 Informacion
 */
 
-div .info {
+.info {
+  box-sizing: border-box;
   color: #ffffff;
   margin: 2em;
+  text-align: justify;
+}
+
+.info p {
+  padding: 1em;
 }
 /*
 Foro
 */
-.forum section {
+.crearForo {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 10vh;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+
 }
 
-.forum h3 {
-  margin: 1em auto 1em auto;
-  padding: 0;
-  font-size: 30px;
-}
-
-.forum form {
-  width: 100%;
-}
-
-.forum input {
-  height: 40px;
-  width: 100%;
-  margin-top: 1.5em;
-}
-
-.forum button {
+.crearForo form {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  border-radius: 5px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 3vh;
+  flex-direction: column;
+  margin: 4em;
 }
+
+.crearForo form label {
+  font-size: 3.5vh;
+  align-self: center;
+  margin: 0.5em;
+}
+
+.crearForo form input {
+  height: 4vh;
+  width: 45vh;
+  margin: 1.5em;
+}
+
+.crearForo form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+}
+
+.crearForo h3 {
+  font-size: 4vh;
+  color: #ffffff;
+}
+
+
 /*
 Foro_seleccionado
 */
@@ -534,96 +490,123 @@ Foro_seleccionado
   justify-content: center;
   text-align: center;
   color: #ffffff;
+  margin: 4em;
 }
 .selection h1 {
-  font-size: 30px;
+  font-size: 3.5vh;
   margin: 0.5em;
 }
 .selection h2 {
-  font-size: 25px;
+  font-size: 3vh;
   margin: 0.5em;
 }
+
+.selection h3 {
+  font-size: 3vh;
+  margin: 0.5em;
+}
+
 .selection span {
+  font-size: 2vh;
   margin: 0.5em;
 }
 .selection li {
   margin: 0.25em;
+  font-size: 3vh;
+  list-style: none;
+
 }
 .selection button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  border-radius: 5px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 3vh;
+  height: 6vh;
+  width: 18vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 1em;
 }
 /*
 Información_personal
 */
 
-div .info_personal{
+.me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
-  margin: 2em;
+  margin: 0.5em;
 }
 
-.info_personal h2{
+.me h3{
+  font-size: 3vh;
   text-align: center;
-  margin: 1em;
+  margin: 0.5em;
 }
-.info_personal span{
+.me span{
   text-align: center;
+  font-size: 3vh;
+  margin: 2px;
 }
 
 /*Foros disponibes*/
 .aviable {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+
 }
 .aviable h3 {
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
-.aviable input {
-  align-self: center;
-}
+
 
 .Atwo {
   text-align: center;
 }
 
-.Atwo ul li {
-  list-style: none;
-  padding: 0.5em;
-}
-
-.Aone {
-  align-self: center;
-  padding: 0.5em 0.5em 2em 0.5em;
-}
-
-/*botones de creacion*/
-.buttoms {
+.in {
   display: flex;
   flex-direction: column;
 }
 
-.buttoms h3 {
-  padding: 0.5em;
-  font-size: 3vh;
-} 
-
-.buttoms button{
-  width: 8em;
-  height: 2.5em;
+.in input {
   align-self: center;
-  margin: 1.5em 0em;
+  height: 4vh;
+  width: 45vh;
+  margin: 0.5em;
+}
+
+.in button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+}
+
+.Atwo ul li {
+  list-style: none;
+  padding: 0.1em;
+  font-size: 2.5vh;
+}
+
+.Aone {
+  align-self: center;
+  padding: 0.1em
+}
+
+/*botones de creacion*/
+.buttoms .refe {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+ 
+}
+
+.buttoms a {
+  text-align: center;
+  padding: 0.5em;
   font-size: 2vh;
+  text-decoration: none;
+  color: #f0f8ff;
 }
 
 /*register*/
@@ -670,5 +653,241 @@ div .info_personal{
   margin-bottom: 1.5em ;
 }
 
-/*HomePage*/
+/*crear post*/
+
+.body {
+  display: flex;
+  flex-direction: column;
 }
+
+.body .frase {
+  font-size: 3.5vh;
+  color: #f0f8ff;
+}
+
+.body .span {
+  text-align: center;
+  margin: 1.5em;
+}
+
+.body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.body form label {
+  text-align: center;
+  font-size: 3vh;
+}
+
+.body form input {
+  height: 4vh;
+  width: 45vh;
+  margin: 1.5em;
+  align-self: center;
+}
+
+.body form textarea {
+  width: 45vh;
+  height: 16vh;
+  align-self: center;
+  margin: 1.5em;
+}
+
+.body form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+}
+
+/*Crear_mazo*/
+
+.crear_mazo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.crear_mazo button {
+  margin: 1em;
+  font-size: 2vh;
+}
+.mazo label {
+  align-self: center;
+  margin: 1em;
+}
+.mazo input {
+  margin: 2em 2em 2em 1em;
+  height: 2.5em;
+  width: 25%;
+}
+.mazo select {
+  height: 3em;
+}
+
+.search label {
+  display: inline-block;
+  margin: 0.5em;
+  font-size: 3vh;
+}
+
+.search li {
+  margin: 0.5em;
+  list-style: none;
+}
+
+.crear_mazo h2 {
+  font-size: 4vh;
+  margin: 0.5em;
+}
+
+
+/*
+CardForm
+*/
+
+.CardForm {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.CardForm h1 {
+  margin: 0.5em;
+  font-size: 4vh;
+  text-align: center;
+}
+.CardForm input {
+  height: 3.5vh;
+  width: 45vh;
+  margin: 1em;
+  align-self: center;
+}
+
+.CardForm form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+}
+
+.CardForm label {
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0em;
+}
+
+.CardForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+Show_Post
+*/
+
+.show_post div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3vh;
+  color: #ffffff;
+  text-align: center;
+  margin: 1em;
+}
+
+.post ul li {
+  list-style: none;
+}
+
+.comments form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.post h2 {
+  font-size: 5vh;
+}
+
+.post h1 {
+  font-size: 5vh;
+}
+
+.comments textarea {
+  height: 9vh;
+  width: 45vh;
+  margin: 1.5em;
+  align-self: center;
+}
+
+.comments button {
+  height: 6vh;
+  width: 18vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 1em;
+}
+
+.comments h2 {
+  font-size: 3vh;
+}
+
+/*Buscar carta*/
+
+.buscar {
+  display: flex;
+  flex-direction: column;
+  color: #f0f8ff;
+}
+
+.fone button {
+  height: 4vh;
+  width: 14vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 1em;
+
+
+}
+
+
+.fone {
+  display: flex;
+  flex-direction: column;
+}
+
+.formCarta h2 {
+  text-align: center;
+  font-size: 3vh;
+  margin: 1em;
+}
+
+.fone input {
+  height: 3.5vh;
+  width: 45vh;
+  margin: 1em;
+  align-self: center;
+
+}
+
+.titulo2 {
+  text-align: center;
+  font-size: 3vh;
+  margin: 1em;
+}
+
+.try p {
+  text-align: center;
+  font-size: 2vh;
+  margin: 1em;
+}
+
+
+

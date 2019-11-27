@@ -1,0 +1,29 @@
+extends layout 
+
+block content 
+
+      div(class="container" id="app")
+       div(class="row")
+         div(class="col-md-6 col-md-offset-3")
+           div(class="panel panel-info")
+                 div(class="panel-heading")
+                          span(class="badge"){{ members.count }}
+                       div(class="panel-body")
+                         div(v-if="joined")
+                           em 
+                             span(v-text="status")
+                           ul(class="chat")
+                             li(class="left clearfix" v-for="message in messages")
+                                div(class="chat-body clearfix")
+                                 div(class="header")
+                                   strong(class="primary-font") {{ message.username }}
+                                 p {{ message.message }}
+                           div(class="panel-footer")
+                             div(class="input-group")
+                               input(id="btn-input" type="text" name="message" class="form-control input-sm" placeholder="Type your message here..." v-model="newMessage" @keyup.enter="sendMessage")
+                               span(class="input-group-btn")
+                                  button(class="btn btn-primary btn-sm" id="btn-chat" @click="sendMessage") Send
+                         div(v-else)
+                           div(class="form-group")
+                             input(type="text" class="form-control" placeholder="enter your username to join chat" v-model="username" @keyup.enter="joinChat")
+                           button(class="btn btn-primary" @click="joinChat") JOIN

@@ -56,7 +56,85 @@ router.post('/login', function(req,res,next){
 
 //Ruta que renderiza y muestra la página principal de la página
 router.get('/home', function(req,res,next){
-  res.render('HomePage');
+  axios.get('http://localhost:3001/forums/').then((ros)=>{
+    res.render('HomePage', {forums: ros.data})
+  })
+})
+
+//Ruta que renderiza y muestra la página de creación de foro
+router.get('/crforum', function(req,res,next){
+  res.render('ForumCreation');
+})
+
+//Ruta que muestra la creación de foros, y confirma si el foro ha sido guardado exitosamente o no. Luego, vuelve a cargar la misma 
+//pestaña de creación
+router.post('/crforum', function(req,res,next){
+  var newForum = {
+    name: req.body.name
+  }
+
+  console.log(newForum);
+  axios.post('http://localhost:3001/forums/save', newForum).then((ros)=>{
+    console.log(ros.data);
+    if(ros.data.registed){
+      res.redirect('/crforum');
+    }
+    else{
+      console.log("No se guardó en el foro");
+      res.redirect('crforum');
+    }
+  })
+})
+
+//
+router.get('/crpost', function(req,res,next){
+  res.render('PostCreation');
+})
+
+//Ruta que se usa para crear un post nuevo con título y contenido. El Axios se encarga de postearlo. Si lo guarda, recarga la página de 
+//creación de post
+router.post('/crpost', function(req,res,next){
+  var newPost = {
+    tittle: req.body.tittle,
+    content: req.body.content
+  }
+
+  axios.post('http://localhost:3001/posts/save', newPost).then((ros)=>{
+    if(ros.data.registered){
+      res.redirect('/crpost');
+    }
+    else{
+      console.log("No se ha creado ningún post:(");
+    }
+  })
+})
+
+//Ruta que llama la página para crear un mazo
+router.get('/crdeck', function(req,res,next){
+  axios.get('http://localhost:3001/cards/').then((ros)=>{
+    res.render('Crear_Mazo', {cd: ros.data});
+    console.log("push");
+  })
+})
+
+//Ruta que muestra la pestaña de foro
+router.get('/shforo', function(req,res,next){
+  res.render ('Show_Forum')
+})
+
+//Ruta que muestra un post
+router.get('/shpost', function(req,res,next){
+  res.render ('Show_Post')
+})
+
+//Ruta que muestra la página donde se ingresan las cartas nuevas
+router.get('/crform', function(req,res,next){
+  res.render ('CardForm')
+})
+
+//Ruta que muestra la página donde se hace la búsqueda de cartas
+router.get('/bcarta', function(req,res,next){
+  res.render ('Buscar_Carta')
 })
 
 module.exports = router;
