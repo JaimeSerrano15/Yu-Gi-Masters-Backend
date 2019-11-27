@@ -4,7 +4,7 @@ var axios = require('axios');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('register', { in: false});
+  res.render('Chat', { in: false});
 });
 
 router.post('/', function(req,res,next){
