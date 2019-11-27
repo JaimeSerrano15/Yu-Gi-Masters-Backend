@@ -431,7 +431,7 @@ div .info_personal {
 
 /*Crear_mazo*/
 
-.crear_mazo div {
+.crear_mazo {
   color: #ffffff;
   font-size: 30px;
   display: flex;
@@ -453,7 +453,5 @@ div .info_personal {
   margin: 1em;
 }
 .crear_mazo button {
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 1em;
 }
