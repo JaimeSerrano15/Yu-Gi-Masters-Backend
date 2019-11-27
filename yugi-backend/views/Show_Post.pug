@@ -2,20 +2,19 @@ extends layout
 
 
 block content
-   div(class="post")
-                h1 Titulo del post 
-                br
-                p Aqui se muestra la descripcion de la publicacion 
-                br
-                span(class="likes") Likes: 3
-                br
-                h2 Comentarios
-                ul
-                    li Aqui van los comentario xdxd                
-   div(class="comments")
-                h2 Agrega un comentario
-                form
-                    textarea(type="text" placeholder="Agrega texto.." name="nombre")
-                    br
-                    br
-                    button(className="submit") Agregar 
+    div(class="show_post")
+        div(class="post")
+                        h1 Titulo del post 
+                        br
+                        p Aqui se muestra la descripcion de la publicacion 
+                        br
+                        span(class="likes") Likes: 3
+                        br
+                        h2 Comentarios
+                        ul
+                            li Aqui van los comentario xdxd                
+        div(class="comments")
+                        h2 Agrega un comentario
+                        form
+                            textarea(type="text" placeholder="Agrega texto.." name="nombre")
+                            button(className="submit") Agregar 

@@ -1,14 +1,13 @@
 extends layout 
 
-block buscarC 
+block content 
      div(class="buscar")
          div(class="formCarta")
             h2 Buscar cartas para tu mazo
-            br
-            form
+            form(class="fone")
                 input(type="text" placeholder="Busca una carta..." name="buscar")
-                button(class="buscar") Buscar 
-            form
-                button(class="agregar") Agregar
-         h2 Datos de la carta
-         div aqui va a ir la informacion de la carta buscada y encontrada
+                button Buscar 
+                button Agregar
+         h2(class="titulo2") Datos de la carta
+         div(class="try") 
+          p aqui va a ir la informacion de la carta buscada y encontrada

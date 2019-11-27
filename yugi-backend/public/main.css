@@ -260,7 +260,7 @@ html {
 }
 
 body {
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e27d991c-f967-4884-b0c4-1ef41a5dc5d7/d6guduy-a9f4a7af-3dc3-4ac4-955a-96117f27e200.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UyN2Q5OTFjLWY5NjctNDg4NC1iMGM0LTFlZjQxYTVkYzVkN1wvZDZndWR1eS1hOWY0YTdhZi0zZGMzLTRhYzQtOTU1YS05NjExN2YyN2UyMDAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kCdbyS33z1y4DkvUm5cvWfF334IYxYQM-zNNseSes_c");
+  background-color: #891100;
   background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -445,6 +445,7 @@ Foro
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2em;
 
 }
 
@@ -456,6 +457,8 @@ Foro
 
 .crearForo form label {
   font-size: 3.5vh;
+  align-self: center;
+  margin: 0.5em;
 }
 
 .crearForo form input {
@@ -468,10 +471,12 @@ Foro
   height: 4vh;
   width: 12vh;
   font-size: 2.5vh;
+  align-self: center;
 }
 
 .crearForo h3 {
   font-size: 4vh;
+  color: #ffffff;
 }
 
 
@@ -695,6 +700,193 @@ Información_personal
   font-size: 2.5vh;
   align-self: center;
   margin: 0.5em;
+}
+
+/*Crear_mazo*/
+
+.crear_mazo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.crear_mazo button {
+  margin: 1em;
+  font-size: 2vh;
+}
+.mazo label {
+  align-self: center;
+  margin: 1em;
+}
+.mazo input {
+  margin: 2em 2em 2em 1em;
+  height: 2.5em;
+  width: 25%;
+}
+.mazo select {
+  height: 3em;
+}
+
+.search label {
+  display: inline-block;
+  margin: 0.5em;
+  font-size: 3vh;
+}
+
+.search li {
+  margin: 0.5em;
+  list-style: none;
+}
+
+.crear_mazo h2 {
+  font-size: 4vh;
+  margin: 0.5em;
+}
+
+
+/*
+CardForm
+*/
+
+.CardForm {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.CardForm h1 {
+  margin: 0.5em;
+  font-size: 4vh;
+  text-align: center;
+}
+.CardForm input {
+  height: 3.5vh;
+  width: 45vh;
+  margin: 1em;
+  align-self: center;
+}
+
+.CardForm form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+}
+
+.CardForm label {
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0em;
+}
+
+.CardForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+Show_Post
+*/
+
+.show_post div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3vh;
+  color: #ffffff;
+  text-align: center;
+  margin: 1em;
+}
+
+.post ul li {
+  list-style: none;
+}
+
+.comments form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.post h2 {
+  font-size: 5vh;
+}
+
+.post h1 {
+  font-size: 5vh;
+}
+
+.comments textarea {
+  height: 9vh;
+  width: 45vh;
+  margin: 1.5em;
+  align-self: center;
+}
+
+.comments button {
+  height: 6vh;
+  width: 18vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 1em;
+}
+
+.comments h2 {
+  font-size: 3vh;
+}
+
+/*Buscar carta*/
+
+.buscar {
+  display: flex;
+  flex-direction: column;
+  color: #f0f8ff;
+}
+
+.fone button {
+  height: 4vh;
+  width: 14vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 1em;
+
+
+}
+
+
+.fone {
+  display: flex;
+  flex-direction: column;
+}
+
+.formCarta h2 {
+  text-align: center;
+  font-size: 3vh;
+  margin: 1em;
+}
+
+.fone input {
+  height: 3.5vh;
+  width: 45vh;
+  margin: 1em;
+  align-self: center;
+
+}
+
+.titulo2 {
+  text-align: center;
+  font-size: 3vh;
+  margin: 1em;
+}
+
+.try p {
+  text-align: center;
+  font-size: 2vh;
+  margin: 1em;
 }
 
 
