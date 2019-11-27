@@ -1,5 +1,7 @@
+//Se importa el modelo de la carta
 var Card = require('../models/Card');
 
+//Este modulo se encarga de guardar cartas dentro de la base de datos
 module.exports.save = (req, res, next) => {
     Card.findOne({
         name: req.body.name
@@ -22,6 +24,7 @@ module.exports.save = (req, res, next) => {
         })
 }
 
+//Exporta una carta en específico
 module.exports.getOne = (req, res, next) => {
     Card.findOne({
         name: req.params.name
@@ -37,13 +40,9 @@ module.exports.getOne = (req, res, next) => {
         })
 }
 
+//Exporta todas las cartas que están dentro de la base
 module.exports.getAll = (req, res, next) => {
-    ///var perPage = Number(req.query.size) || 10,
-    //    page = req.query.page > 0 ? req.query.page : 0;
-
     Card.find({})
-    //    .limit(perPage)
-    //    .skip(perPage * page)
         .then((cards) => {
             return res.status(200).json(cards);
         }).catch(err => {
@@ -51,6 +50,7 @@ module.exports.getAll = (req, res, next) => {
         })
 }
 
+//Busca una carta en específico y la borra de la base
 module.exports.delete = (req, res, next) => {
     Forum.findOneAndDelete({ name: req.params.name })
         .then((data) => {

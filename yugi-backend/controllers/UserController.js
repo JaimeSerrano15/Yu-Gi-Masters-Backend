@@ -1,6 +1,8 @@
+//
 var User = require('../models/User');
 var alerta = require('alert-node');
 
+//Si no existe un usuario que tenga el mismo nombre que el escrito, se procede a guardar el usuario en la base
 module.exports.save = (req,res,next) =>{
     User.findOne({
         name: req.body.name
@@ -22,6 +24,7 @@ module.exports.save = (req,res,next) =>{
     })
 };
 
+//Revisa si las credenciales corresponden a un usuario. Si es así, permite al usuario ingresar a la sesión 
 module.exports.logIn = (req, res, next) => {
     User.findOne({
         name: req.body.name,

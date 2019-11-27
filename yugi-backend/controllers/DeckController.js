@@ -1,5 +1,7 @@
+//Importa el modelo del deck
 var Deck = require("../models/Deck");
 
+//Guarda un deck dentro de la base
 module.exports.save = (req, res, next) => {
   Deck.findOne({
     name: req.body.name
@@ -7,7 +9,7 @@ module.exports.save = (req, res, next) => {
     if (foundDeck) {
       throw new Error(`Deck duplicado ${req.body.name}`);
     } else {
-      let newForum = new Forum({
+      let newDeck = new Deck({
         name: req.body.name
       });
       newDeck.save();
@@ -16,6 +18,7 @@ module.exports.save = (req, res, next) => {
   });
 };
 
+//Busca un deck específico por medio de un nombre 
 module.exports.getOne = (req, res, next) => {
   Deck.findOne({
     name: req.params.name
@@ -32,6 +35,7 @@ module.exports.getOne = (req, res, next) => {
     });
 };
 
+//Busca todos los decks que estén dentro de la base
 module.exports.getAll = (req, res, next) => {
   var perPage = Number(req.query.size) || 10,
     page = req.query.page > 0 ? req.query.page : 0;
@@ -47,6 +51,7 @@ module.exports.getAll = (req, res, next) => {
     });
 };
 
+//Busca un deck en específico y permite que este sea modificado
 module.exports.update = (req, res, next) => {
   let update = {
     ...req.body
@@ -70,6 +75,7 @@ module.exports.update = (req, res, next) => {
     });
 };
 
+//Busca un deck en específico y lo elimina
 module.exports.delete = (req, res, next) => {
     Deck.findOneAndDelete({ name: req.params.name })
       .then(data => {

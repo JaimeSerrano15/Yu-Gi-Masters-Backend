@@ -1,5 +1,7 @@
+//Se exporta el modelo de los post
 var Post = require('../models/Post');
 
+//Se guarda el post dentro de la base si no encuentra otro post con el mismo nombre
 module.exports.save = (req, res, next) => {
     Post.findOne({
         tittle: req.body.tittle
@@ -17,6 +19,7 @@ module.exports.save = (req, res, next) => {
         })
 };
 
+//Busca un post dentro de la base con un nombre en específico
 module.exports.getOne = (req, res, next) => {
     Post.findOne({
         tittle: req.params.tittle
@@ -34,6 +37,7 @@ module.exports.getOne = (req, res, next) => {
         })
 };
 
+//Regresa el nombre de todos los post encontrados en la base
 module.exports.getAll = (req, res, next) => {
     var perPage = Number(req.query.size) || 10,
         page = req.query.page > 0 ? req.query.page : 0;
@@ -48,6 +52,7 @@ module.exports.getAll = (req, res, next) => {
         })
 };
 
+//Busca un post en específico y procede a eliminarlo
 module.exports.delete = (req,res,next)=>{
     Post.findOneAndDelete({tittle: req.params.name})
     .then((data) =>{
