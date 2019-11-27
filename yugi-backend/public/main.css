@@ -243,7 +243,7 @@ font-size: 20px;
 @import url("https://fonts.googleapis.com/css?family=Alata&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /*
-General and CreatePost
+General
 */
 
 *,
@@ -275,7 +275,7 @@ code {
     monospace;
 }
 
-nav ul li:hover {
+header nav ul li:hover {
   color: #ffd700;
 }
 
@@ -305,48 +305,23 @@ header {
   height: 70px;
 }
 
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em;
-  width: 60%;
-  height: 75%;
-}
-
-h3 {
-  margin: 0.5em;
-  text-align: center;
-  color: #f0ffff;
-  font-family: "Alata", sans-serif;
-  text-align: center;
-}
-
-.BigText {
-  height: 20vh;
-}
-
-.submitBtn button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  border-radius: 5px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 3vh;
-}
-
-.title input {
-  height: 2.5em;
-  width: 100%;
-}
 
 nav ul li {
   padding: 0.5vh 5vh;
   list-style: none;
   text-decoration: none;
   font-size: 2vh;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f0f8ff;
+}
+
+.footer ul li span a {
+  text-decoration: none;
+  font-size: 2.3vh;
+  color: #f0f8ff;
 }
 
 nav ul {
@@ -357,44 +332,6 @@ nav ul {
   padding: 0;
 }
 
-.span {
-  box-sizing: border-box;
-  padding: 1em;
-  font-size: 3vh;
-  text-align: center;
-}
-.article div {
-  margin: 0;
-  padding: 0;
-}
-
-.article {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-.BigText {
-  width: 100%;
-}
-
-.frase {
-  font-family: "Alata", sans-serif;
-  box-sizing: border-box;
-  color: #f0ffff;
-}
-
-.BigText {
-  border-radius: 5px;
-  border: solid black;
-  border-width: 1.5px;
-}
-
-.boxTitle {
-  border-radius: 5px;
-  border: solid black;
-  border-width: 1.5px;
-}
 
 .footer {
   background: #000000;
@@ -402,7 +339,7 @@ nav ul {
   bottom: 0;
   box-sizing: border-box;
   position: absolute;
-  height: 50px;
+  height: 70px;
   width: 100%;
 }
 
@@ -413,11 +350,10 @@ nav ul {
 }
 
 .footer ul li {
-  display: flex;
+  
   justify-content: center;
   margin: 1em 2em 0em 2em;
   list-style: none;
-  font-size: 2.5vh;
 }
 
 .facebook {
@@ -444,7 +380,7 @@ Login
   justify-content: center;
   align-items: center;
   margin: 2em;
-  height: 75%;
+ 
 }
 
 .LoginForm form {
@@ -457,23 +393,31 @@ Login
   justify-content: center;
 }
 
-.Login input {
-  width: 40vh;
-  height: 3.5vh;
+.LoginForm form input {
+  height: 4vh;
+  width: 45vh;
+  margin: 1.5em;
 }
 
 .LoginForm form label {
   align-self: center;
-  font-size: 3vh;
+  font-size: 3.5vh;
+  margin: 0.5em;
 }
-.Btn button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  font-size: 3vh;
+.LoginForm form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+
+}
+
+.nav-li {
+  font-size: 2.5vh;
+  margin: 0.5em;
+  color: #f0f8ff;
+  text-decoration: none;
 }
 
 .LoginForm .Btn {
@@ -484,46 +428,53 @@ Login
 Informacion
 */
 
-div .info {
+.info {
+  box-sizing: border-box;
   color: #ffffff;
   margin: 2em;
+  text-align: justify;
+}
+
+.info p {
+  padding: 1em;
 }
 /*
 Foro
 */
-.forum section {
+.crearForo {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 10vh;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-.forum h3 {
-  margin: 1em auto 1em auto;
-  padding: 0;
-  font-size: 30px;
-}
-
-.forum form {
-  width: 100%;
-}
-
-.forum input {
-  height: 40px;
-  width: 100%;
-  margin-top: 1.5em;
-}
-
-.forum button {
+.crearForo form {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  border-radius: 5px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 3vh;
+  flex-direction: column;
+  margin: 4em;
 }
+
+.crearForo form label {
+  font-size: 3.5vh;
+}
+
+.crearForo form input {
+  height: 4vh;
+  width: 45vh;
+  margin: 1.5em;
+}
+
+.crearForo form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+}
+
+.crearForo h3 {
+  font-size: 4vh;
+}
+
+
 /*
 Foro_seleccionado
 */
@@ -534,96 +485,123 @@ Foro_seleccionado
   justify-content: center;
   text-align: center;
   color: #ffffff;
+  margin: 4em;
 }
 .selection h1 {
-  font-size: 30px;
+  font-size: 3.5vh;
   margin: 0.5em;
 }
 .selection h2 {
-  font-size: 25px;
+  font-size: 3vh;
   margin: 0.5em;
 }
+
+.selection h3 {
+  font-size: 3vh;
+  margin: 0.5em;
+}
+
 .selection span {
+  font-size: 2vh;
   margin: 0.5em;
 }
 .selection li {
   margin: 0.25em;
+  font-size: 3vh;
+  list-style: none;
+
 }
 .selection button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  border-radius: 5px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 3vh;
+  height: 6vh;
+  width: 18vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 1em;
 }
 /*
 Información_personal
 */
 
-div .info_personal{
+.me {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
-  margin: 2em;
+  margin: 0.5em;
 }
 
-.info_personal h2{
+.me h3{
+  font-size: 3vh;
   text-align: center;
-  margin: 1em;
+  margin: 0.5em;
 }
-.info_personal span{
+.me span{
   text-align: center;
+  font-size: 3vh;
+  margin: 2px;
 }
 
 /*Foros disponibes*/
 .aviable {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+
 }
 .aviable h3 {
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
-.aviable input {
-  align-self: center;
-}
+
 
 .Atwo {
   text-align: center;
 }
 
-.Atwo ul li {
-  list-style: none;
-  padding: 0.5em;
-}
-
-.Aone {
-  align-self: center;
-  padding: 0.5em 0.5em 2em 0.5em;
-}
-
-/*botones de creacion*/
-.buttoms {
+.in {
   display: flex;
   flex-direction: column;
 }
 
-.buttoms h3 {
-  padding: 0.5em;
-  font-size: 3vh;
-} 
-
-.buttoms button{
-  width: 8em;
-  height: 2.5em;
+.in input {
   align-self: center;
-  margin: 1.5em 0em;
+  height: 4vh;
+  width: 45vh;
+  margin: 0.5em;
+}
+
+.in button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+}
+
+.Atwo ul li {
+  list-style: none;
+  padding: 0.1em;
+  font-size: 2.5vh;
+}
+
+.Aone {
+  align-self: center;
+  padding: 0.1em
+}
+
+/*botones de creacion*/
+.buttoms .refe {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+ 
+}
+
+.buttoms a {
+  text-align: center;
+  padding: 0.5em;
   font-size: 2vh;
+  text-decoration: none;
+  color: #f0f8ff;
 }
 
 /*register*/
@@ -670,5 +648,54 @@ div .info_personal{
   margin-bottom: 1.5em ;
 }
 
-/*HomePage*/
+/*crear post*/
+
+.body {
+  display: flex;
+  flex-direction: column;
 }
+
+.body .frase {
+  font-size: 3.5vh;
+  color: #f0f8ff;
+}
+
+.body .span {
+  text-align: center;
+  margin: 1.5em;
+}
+
+.body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.body form label {
+  text-align: center;
+  font-size: 3vh;
+}
+
+.body form input {
+  height: 4vh;
+  width: 45vh;
+  margin: 1.5em;
+  align-self: center;
+}
+
+.body form textarea {
+  width: 45vh;
+  height: 16vh;
+  align-self: center;
+  margin: 1.5em;
+}
+
+.body form button {
+  height: 4vh;
+  width: 12vh;
+  font-size: 2.5vh;
+  align-self: center;
+  margin: 0.5em;
+}
+
+
+

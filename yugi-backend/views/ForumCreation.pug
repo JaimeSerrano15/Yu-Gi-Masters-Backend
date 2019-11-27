@@ -2,11 +2,10 @@ extends layout
 
 block content
     section(class ="crearForo")
-        span(class = "tittle") Crea un foro a tu gusto
-        article(class = "body")
-            h3 Nombre de tu foro
-                form(class="form" method="POST") 
-                    input(type="text" placeholder="Nombre creativo..." name="name")
-                    br
-                    br
-                    button(className="submit") Crear 
+        h3(class = "tittle") Crea un foro a tu gusto
+        form(class="form" method="POST") 
+         label(for="name") Nombre de tu foro
+         input(type="text" placeholder="Nombre creativo..." name="name")
+         br
+         br
+         button(className="submit") Crear 

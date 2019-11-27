@@ -49,9 +49,6 @@ router.post('/login', function(req,res,next){
 })
 
 router.get('/home', function(req,res,next){
-<<<<<<< HEAD
-  res.render('HomePage');
-=======
   axios.get('http://localhost:3001/forums/').then((ros)=>{
     res.render('HomePage', {forums: ros.data})
   })
@@ -104,7 +101,14 @@ router.get('/crdeck', function(req,res,next){
     res.render('Crear_Mazo', {cd: ros.data});
     console.log("push");
   })
->>>>>>> Jaime
+})
+
+router.get('/shforo', function(req,res,next){
+  res.render ('Show_Forum')
+})
+
+router.get('/shpost', function(req,res,next){
+  res.render ('Show_Post')
 })
 
 module.exports = router;
