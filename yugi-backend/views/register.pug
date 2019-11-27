@@ -4,6 +4,8 @@ block content
     div(class="register-form")
         div(class="present")
             p Bienvenido a la versión Beta de Yu-Gi-Masters. Buscamos que los usuarios puedan encontrar información sobre mazos, cartas y apoyo de la comunidad.
+            if(noup == "nice")
+                p No se ha creado el usuario. Pruebe de nuevo
         form(class="rf" method="POST")
             label(for="name") Name: 
             input(type="text" name="name" placeholder="Tu nombre de duelista")

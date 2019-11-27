@@ -30,10 +30,10 @@ module.exports.getOne = (req, res, next) => {
             if (foundCard)
                 return res.status(200).json(foundCard);
             else
-                return res.status(400).json(null);
+                return res.redirect('/bcarta');
         })
         .catch(err => {
-            next(err);
+            console.log("NOOOOOOOOOOO")
         })
 }
 

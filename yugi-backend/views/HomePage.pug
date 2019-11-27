@@ -9,16 +9,17 @@ block content
             div(class="Aone")
                 h3 Foros de la comunidad
             div(class="in")
-                input(type="text" placeholder="Filtrar..." name="buscar")
-                button(class="submit") Buscar
             div(class="Atwo")    
                 ul
                     for forum in forums
-                        a(href="https://www.google.com/" class="forum-link")
+                        a(href="/shforo" class="forum-link")
                             li= forum.name
     div(class="buttoms")
         div(class="refe")
                 a(href="/crforum" class="create-foro")
                     span(class="CForo") Crear Foro
-                a(href="/crforum" class="create-mazo")
+                a(href="/crdeck" class="create-mazo")
                     span(class="CMazo") Crear Mazo
+                a(href="/crpost" class="create-mazo")
+                    span(class="CMazo") Crear Post
+                a(href="/bcarta" class="create-mazo") Ver una Carta
