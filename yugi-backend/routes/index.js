@@ -107,4 +107,8 @@ router.get('/shpost', function(req,res,next){
   res.render ('Show_Post')
 })
 
+router.get('/crform', function(req,res,next){
+  res.render ('CardForm')
+})
+
 module.exports = router;

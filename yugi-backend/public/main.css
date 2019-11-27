@@ -455,3 +455,22 @@ div .info_personal {
 .crear_mazo button {
   margin: 1em;
 }
+
+/*
+CardForm
+*/
+
+.CardForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+.CardForm h1{
+margin: 1em;
+}
+.CardForm input{
+  height: 5vh;
+  margin: 1em;
+}
