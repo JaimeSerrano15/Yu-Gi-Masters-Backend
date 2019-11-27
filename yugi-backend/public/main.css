@@ -460,17 +460,31 @@ div .info_personal {
 CardForm
 */
 
-.CardForm{
+.CardForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 30px;
   color: #ffffff;
 }
-.CardForm h1{
-margin: 1em;
+.CardForm h1 {
+  margin: 1em;
 }
-.CardForm input{
+.CardForm input {
   height: 5vh;
+  margin: 1em;
+}
+
+/*
+Show_Post
+*/
+
+.show_post div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
   margin: 1em;
 }
