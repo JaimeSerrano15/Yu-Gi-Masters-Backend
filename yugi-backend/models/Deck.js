@@ -1,6 +1,8 @@
+//Se crea una constante con Mongoose para así poder crear esquemas que sirven de esqueleto para los datos que irán a la base 
 const mongoose = require("mongoose"),
   Schema = mongoose.Schema;
 
+//Se crea el esquema del deck con sus atributos respectivos. Estos son los esquemas que se irán al Cluster en línea  
 var DeckSchema = Schema({
   name: {
     type: String,
@@ -24,4 +26,5 @@ var DeckSchema = Schema({
   ]
 });
 
+//Se exporta el modelo con el nombre de Mazos
 module.exports = mongoose.model("mazos", DeckSchema);

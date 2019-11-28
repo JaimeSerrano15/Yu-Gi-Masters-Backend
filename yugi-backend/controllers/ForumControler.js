@@ -1,5 +1,7 @@
+//Exporta el modelo del foro
 var Forum = require("../models/Forum");
 
+//Guarda el foro si no existen uno con el mismo nombre con anterioridad
 module.exports.save = (req, res, next) => {
   Forum.findOne(
     {
@@ -22,6 +24,7 @@ module.exports.save = (req, res, next) => {
   });
 };
 
+//Busca un foro en específico por medio del nombre
 module.exports.getOne = (req, res, next) => {
   Forum.findOne({
     name: req.params.name
@@ -38,6 +41,7 @@ module.exports.getOne = (req, res, next) => {
     });
 };
 
+//Exporta el nombre de todos los foros registrados
 module.exports.getAll = (req, res, next) => {
   var perPage = Number(req.query.size) || 10,
     page = req.query.page > 0 ? req.query.page : 0;
@@ -53,6 +57,7 @@ module.exports.getAll = (req, res, next) => {
     });
 };
 
+//Permite buscar un foro en específico y modificarlo
 module.exports.update = (req, res, next) => {
   let update = {
     ...req.body
@@ -76,6 +81,7 @@ module.exports.update = (req, res, next) => {
     });
 };
 
+//Busca un foro y lo borra de la base
 module.exports.delete = (req, res, next) => {
   Forum.findOneAndDelete({ name: req.params.name })
     .then(data => {

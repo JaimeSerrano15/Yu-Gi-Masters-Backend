@@ -1,3 +1,4 @@
+//Se crean las variables que usa el Express y Axios
 var express = require('express');
 var router = express.Router();
 var axios = require('axios');
@@ -7,6 +8,7 @@ router.get('/', function(req, res, next) {
   res.render('register', { noup: null});
 });
 
+//Permite crear un usuario con los datos ingresados, redireccionando a la ruta de inicio de sesión por medio de Axios
 router.post('/', function(req,res,next){
   var newUser = {
     name: req.body.name,
@@ -24,14 +26,18 @@ router.post('/', function(req,res,next){
 
 })
 
+//Ruta que manda a renderizar y mostrar la pestaña de información
 router.get('/info', function(req,res,next){
   res.render('Informacion');
 })
 
+//Ruta que manda a renderizar y mostrar la pestaña de inicio de sesión
 router.get('/login', function(req,res,next){
   res.render('login');
 })
 
+//Ruta que sirve para iniciar sesión con un usuario previamente registrado. Si se confirma que el usuario es existente,
+//se procede a redireccionar hacia la pestaña de Home por medio de Axios
 router.post('/login', function(req,res,next){
   var confirm = {
     name: req.body.name,
@@ -52,16 +58,20 @@ router.post('/login', function(req,res,next){
   })
 })
 
+//Ruta que renderiza y muestra la página principal de la página
 router.get('/home', function(req,res,next){
   axios.get('http://localhost:3001/forums/').then((ros)=>{
     res.render('HomePage', {forums: ros.data})
   })
 })
 
+//Ruta que renderiza y muestra la página de creación de foro
 router.get('/crforum', function(req,res,next){
   res.render('ForumCreation');
 })
 
+//Ruta que muestra la creación de foros, y confirma si el foro ha sido guardado exitosamente o no. Luego, vuelve a cargar la misma 
+//pestaña de creación
 router.post('/crforum', function(req,res,next){
   var newForum = {
     name: req.body.name
@@ -80,10 +90,13 @@ router.post('/crforum', function(req,res,next){
   })
 })
 
+//
 router.get('/crpost', function(req,res,next){
   res.render('PostCreation');
 })
 
+//Ruta que se usa para crear un post nuevo con título y contenido. El Axios se encarga de postearlo. Si lo guarda, recarga la página de 
+//creación de post
 router.post('/crpost', function(req,res,next){
   var newPost = {
     tittle: req.body.tittle,
@@ -100,6 +113,7 @@ router.post('/crpost', function(req,res,next){
   })
 })
 
+//Ruta que llama la página para crear un mazo
 router.get('/crdeck', function(req,res,next){
   axios.get('http://localhost:3001/cards/').then((ros)=>{
     axios.get('http://localhost:3001/decks').then((ras)=>{
@@ -135,6 +149,7 @@ router.post('/crdeck', function(req,res,next){
 
 })
 
+//Ruta que muestra la pestaña de foro
 router.get('/shforo', function(req,res,next){
   axios.get('http://localhost:3001/posts').then((ras)=>{
     console.log(ras.data);
@@ -142,14 +157,17 @@ router.get('/shforo', function(req,res,next){
   })
 })
 
+//Ruta que muestra un post
 router.get('/shpost', function(req,res,next){
   res.render ('Show_Post')
 })
 
+//Ruta que muestra la página donde se ingresan las cartas nuevas
 router.get('/crform', function(req,res,next){
   res.render ('CardForm')
 })
 
+//Ruta que muestra la página donde se hace la búsqueda de cartas
 router.get('/bcarta', function(req,res,next){
   res.render('Buscar_Carta')
 })
@@ -169,7 +187,5 @@ router.post('/bcarta', function(req,res,next){
   })
 
 })
-
-
 
 module.exports = router;
