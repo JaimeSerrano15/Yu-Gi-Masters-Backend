@@ -3,14 +3,9 @@ extends layout
 block content
 
     div(class="selection")
-        h1  Aqui va el nombre del foro
-            br
-            span Seguir Foro 
             h2 Publicaciones
             ul 
                 for post in posts
                     p= "Título del Post: " + post.tittle + " || Contenido del Post: " + post.content
-            h3 Seguidores
-            ul 
-                li aqui van los seguidores del foro
-            button(className="publicar") Publicacion Nueva
+            br
+            a(href="/home") Regresar

@@ -18,11 +18,9 @@ var DeckSchema = Schema({
     ref: "usuarios"
   },
 
-  cards: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "cartas"
-    }
+  cards: [{
+    type: Object
+  }
   ]
 });
 
