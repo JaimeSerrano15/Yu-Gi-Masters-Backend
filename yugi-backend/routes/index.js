@@ -21,7 +21,7 @@ router.post('/', function(req,res,next){
 })
 
 router.get('/info', function(req,res,next){
-  res.render('info');
+  res.render('Informacion');
 })
 
 router.get('/login', function(req,res,next){
