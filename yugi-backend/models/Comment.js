@@ -2,7 +2,7 @@
 const mongoose = require('mongoose'),
     Schema = mongoose.Schema
 
-//Se crea el esquema de los comentarios con sus atributos respectivos. Estos son los esquemas que se irán al Cluster en línea
+//Se crea el esquema de los comentarios con sus atributos respectivos. Estos son los esquemas que se irán al Cluster en línea en Mongo Atlas
 var CommentSchema = Schema({
     title: {
         type: String,
