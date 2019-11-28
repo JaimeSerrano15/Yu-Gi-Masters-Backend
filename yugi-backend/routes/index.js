@@ -5,7 +5,7 @@ var axios = require('axios');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('register', { in: false});
+  res.render('register', { noup: null});
 });
 
 //Permite crear un usuario con los datos ingresados, redireccionando a la ruta de inicio de sesión por medio de Axios
@@ -17,14 +17,18 @@ router.post('/', function(req,res,next){
   }
 
   axios.post('http://localhost:3001/users', newUser).then((ros)=>{
-    res.redirect('/login');
+    if(ros.data.registed){
+      res.redirect('/login');
+    }else{
+      res.render('register', {noup: 'nice'});
+    }
   })
 
 })
 
 //Ruta que manda a renderizar y mostrar la pestaña de información
 router.get('/info', function(req,res,next){
-  res.render('info');
+  res.render('Informacion');
 })
 
 //Ruta que manda a renderizar y mostrar la pestaña de inicio de sesión
@@ -119,7 +123,10 @@ router.get('/crdeck', function(req,res,next){
 
 //Ruta que muestra la pestaña de foro
 router.get('/shforo', function(req,res,next){
-  res.render ('Show_Forum')
+  axios.get('http://localhost:3001/posts').then((ras)=>{
+    console.log(ras.data);
+    res.render('Show_Forum', {posts: ras.data});
+  })
 })
 
 //Ruta que muestra un post
@@ -134,7 +141,23 @@ router.get('/crform', function(req,res,next){
 
 //Ruta que muestra la página donde se hace la búsqueda de cartas
 router.get('/bcarta', function(req,res,next){
-  res.render ('Buscar_Carta')
+  res.render('Buscar_Carta')
+})
+
+router.post('/bcarta', function(req,res,next){
+  var searched = req.body.buscar;
+  console.log(searched);
+
+  axios.get(`http://localhost:3001/cards/${searched}`).then((ros)=>{
+    if(ros.data){
+      console.log(ros.data);
+      res.render('Buscar_Carta', {acard: ros.data});
+    }
+    else{
+      res.redirect('/bcarta');
+    }
+  })
+
 })
 
 module.exports = router;

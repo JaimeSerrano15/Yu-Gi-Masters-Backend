@@ -8,18 +8,24 @@ module.exports.save = (req,res,next) =>{
         name: req.body.name
     }, '--password --email --follows')
     .then((foundUser) =>{
+        var userVer = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
         if(foundUser){
             throw new Error(`Usuario duplicado ${req.body.name}`);
         }
         else{
-            let newUser = new User({
-                name: req.body.name,
-                password: req.body.password,
-                email: req.body.email,
-            });
-
-            newUser.save();
-            return res.json({registed: true});
+            if(userVer.test(req.body.email)){
+                let newUser = new User({
+                    name: req.body.name,
+                    password: req.body.password,
+                    email: req.body.email,
+                });
+    
+                newUser.save();
+                return res.json({registed: true});
+            }
+            else{
+                return res.json({registed: false});
+            }
         }
     })
 };

@@ -4,10 +4,18 @@ block content
      div(class="buscar")
          div(class="formCarta")
             h2 Buscar cartas para tu mazo
-            form(class="fone")
+            form(class="fone" method="POST")
                 input(type="text" placeholder="Busca una carta..." name="buscar")
                 button Buscar 
-                button Agregar
          h2(class="titulo2") Datos de la carta
-         div(class="try") 
-          p aqui va a ir la informacion de la carta buscada y encontrada
+            br
+            br
+            if(acard)
+                p= acard.name
+                p= acard.attribute
+                p= acard.stars
+                p= acard.description
+                p= acard.type
+            br
+            a(href="/home") Regresar
+         div(class="try")
