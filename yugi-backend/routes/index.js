@@ -102,9 +102,37 @@ router.post('/crpost', function(req,res,next){
 
 router.get('/crdeck', function(req,res,next){
   axios.get('http://localhost:3001/cards/').then((ros)=>{
-    res.render('Crear_Mazo', {cd: ros.data});
-    console.log("push");
+    axios.get('http://localhost:3001/decks').then((ras)=>{
+      res.render('Crear_Mazo', {cd: ros.data, mz: ras.data})
+    })
   })
+})
+
+router.post('/crdeck', function(req,res,next){
+  var newDeck = {
+    name: req.body.ndeck
+  }
+
+  console.log("AHHHHH " + req.body.ndeck);
+  if(req.body.ndeck){
+    axios.post('http://localhost:3001/decks/save', newDeck).then((ros)=>{
+      res.redirect('/crdeck');
+    })
+  }
+  else{
+    var addCard = {
+      deck: req.body.onemz,
+      thecard: req.body.selec
+    }
+
+    axios.post("http://localhost:3001/decks/addcard", addCard).then((ros)=>{
+      if(ros.data.saved){
+        res.redirect('/crdeck');
+      }
+    })
+
+  }
+
 })
 
 router.get('/shforo', function(req,res,next){

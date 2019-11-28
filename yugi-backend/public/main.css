@@ -345,7 +345,7 @@ Información_personal
 }
 
 /*Foros disponibes*/
-.aviable {
+.av {
   display: flex;
   flex-direction: column;
 }

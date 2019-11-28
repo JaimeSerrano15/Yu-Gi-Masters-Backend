@@ -1,4 +1,5 @@
 var Deck = require("../models/Deck");
+var Card = require("../models/Card");
 
 module.exports.save = (req, res, next) => {
   Deck.findOne({
@@ -7,7 +8,7 @@ module.exports.save = (req, res, next) => {
     if (foundDeck) {
       throw new Error(`Deck duplicado ${req.body.name}`);
     } else {
-      let newForum = new Forum({
+      let newDeck = new Deck({
         name: req.body.name
       });
       newDeck.save();
@@ -31,6 +32,25 @@ module.exports.getOne = (req, res, next) => {
       next(err);
     });
 };
+
+module.exports.saveCard = (req,res,next) => {
+  Deck.findOne({
+    name: req.body.deck
+  })
+    .then(foundDeck =>{
+      if(foundDeck){
+        console.log(foundDeck.cards);
+        Card.findOne({
+          name: req.body.thecard
+        })
+          .then(foundCard =>{
+            console.log(foundCard);
+            foundDeck.cards.push(foundCard);
+            return res.json({saved: true});
+          })
+      }
+    })
+}
 
 module.exports.getAll = (req, res, next) => {
   var perPage = Number(req.query.size) || 10,

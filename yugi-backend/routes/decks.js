@@ -8,6 +8,8 @@ router.get('/:name', deckController.getOne);
 
 router.post('/save', deckController.save);
 
+router.post('/addcard', deckController.saveCard);
+
 router.put('/:name', deckController.update);
 
 router.delete('/:title', deckController.delete);
