@@ -1,6 +1,7 @@
 /*
 General
 */
+@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Arimo|Fira+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Arimo|Fira+Sans|Roboto&display=swap');
 
@@ -92,9 +93,9 @@ nav ul {
 .footer {
   background: #000000;
   color: #faebd7;
-  bottom: 0;
   box-sizing: border-box;
   position: absolute;
+  bottom: 0;
   height: 70px;
   width: 100%;
 }
@@ -141,9 +142,9 @@ button:hover {
 }
 
 input {
-  border: 2px solid #ffffff;
+  border: 2px solid #000000;
   border-radius: 4px;
-  background: transparent;
+  background: #ffffff;
   color: #f0f8ff;
 }
 
@@ -167,6 +168,8 @@ a:hover {
 
 a {
   text-decoration: none;
+  font-size: 3vh;
+  font-family: 'Alatsi', sans-serif;
 
 }
 
@@ -260,6 +263,7 @@ Foro
   font-size: 3.5vh;
   align-self: center;
   margin: 0.5em;
+  color: #ffffff;
 }
 
 .crearForo form input {
@@ -287,12 +291,14 @@ Foro_seleccionado
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  margin: 4em;
+  margin: 1em;
 }
 .selection h1 {
   font-size: 3.5vh;
-  margin: 0.5em;
+  margin: 0.1em;
 }
+
+
 .selection h2 {
   font-size: 3vh;
   margin: 0.5em;
@@ -369,9 +375,16 @@ Información_personal
 
 .Atwo ul li {
   list-style: none;
-  padding: 0.1em;
   font-size: 2.5vh;
+  color: #8a2be2;
+  font-family: 'Alatsi', sans-serif;;
 }
+
+.Atwo ul li:hover {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 
 .Aone {
   align-self: center;
@@ -429,6 +442,15 @@ Información_personal
   width: 38vh;
   align-self: center;
   margin-bottom: 1.5em;
+}
+
+.register-form form label {
+  color: #ffffff;
+} 
+
+.register-form p {
+  color: #ffffff;
+  font-size: 3vh;
 }
 
 /*crear post*/
